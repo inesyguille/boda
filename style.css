@@ -1,0 +1,326 @@
+/* ------------------------------
+   ESTILO GENERAL
+--------------------------------*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f5ef;
+    font-family:'Cormorant Garamond', serif;
+    color:#4d4d4d;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+/* ------------------------------
+   ICONOS SVG
+--------------------------------*/
+.icono-boton{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:22px; /* separación perfecta */
+    margin-top:25px;
+}
+
+.icon{
+    width:90px;
+    height:90px;
+    vertical-align:middle;
+    margin-right:10px;
+}
+
+
+/* Icono grande del sobre */
+.corazon .icon{
+    width:102px;
+    height:102px;
+}
+
+
+/* Icono final */
+.final .icon{
+    width:88px;
+    height:88px;
+}
+
+/* ------------------------------
+   HOJAS
+--------------------------------*/
+
+.hojas{
+    position: fixed;
+    width: 420px;
+    opacity: .38;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.hojas1{
+    top:0;
+    left:0;
+}
+
+.hojas2{
+    top:0;
+    right:0;
+    transform:scaleX(-1);
+}
+
+.hojas3{
+    bottom:0;
+    left:0;
+    transform:rotate(180deg);
+}
+
+.hojas4{
+    bottom:0;
+    right:0;
+    transform:rotate(180deg) scaleX(-1);
+}
+
+/* ------------------------------
+   PORTADA
+--------------------------------*/
+
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+    position:relative;
+    z-index:10;
+}
+
+.sobre{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:transparent;      /* elimina el fondo blanco */
+    box-shadow:none;             /* elimina la sombra */
+    padding:0;
+    max-width:700px;
+    width:100%;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.sobre:hover{
+    transform:translateY(-6px);
+}
+
+/* Imagen del sobre */
+.photo{
+    width:520px;
+    max-width:95%;
+    display:block;
+}
+
+/* Texto colocado encima del sobre */
+.texto-sobre{
+    position:absolute;
+    top:55px;
+    left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    z-index:5;
+}
+
+.texto-sobre .anillos{
+    width:70px;
+    height:70px;
+    margin-bottom:12px;
+}
+
+.texto-sobre h1{
+    font-family:'Parisienne', cursive;
+    font-size:72px;
+    color:#6d8064;
+    margin:10px 0;
+}
+
+.texto-sobre h2{
+    font-size:26px;
+    font-weight:300;
+    color:#6d8064;
+}
+
+.sobre p{
+    margin-top:25px;
+    font-size:22px;
+}
+/* ------------------------------
+ TARJETAS
+--------------------------------*/
+
+#contenido{
+    opacity:0;
+    visibility:hidden;
+    padding:20px;
+    transition:0.5s;
+    position:relative;
+    z-index:30;
+}
+
+.tarjeta{
+    background:white;
+    max-width:700px;
+    margin:40px auto;
+    padding:45px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.tarjeta h2{
+    font-family:'League Script', cursive;
+    color:#6d8064;
+    font-size:62px;
+    font-weight:400;
+    margin-bottom:25px;
+}
+.tarjeta h3{
+    font-family:'League Script', cursive;
+    color:#6d8064;
+    font-size:50px;
+    font-weight:400;
+    margin-bottom:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+}.tarjeta p{
+    font-size:25px;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+/* ------------------------------
+ BOTONES
+--------------------------------*/
+
+.boton{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+
+    margin-top:15px;
+    padding:16px 34px;
+
+    background:#3b633b; /* verde césped */
+    color:white;
+    text-decoration:none;
+
+    border-radius:12px; /* más cuadrado */
+    transition:.3s;
+    font-size:22px;
+}
+
+/* ------------------------------
+ FINAL
+--------------------------------*/
+
+.final{
+    padding:80px 20px 120px;
+}
+
+.final h2{
+    font-family:'League Script', cursive;
+    color:#6d8064;
+    font-size:68px;
+    font-weight:400;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+}
+.telefonos{
+    display:flex;
+    justify-content:center;
+    gap:80px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.telefonos h4{
+    color:#6d8064;
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.telefonos p{
+    font-size:22px;
+    margin:0;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* ------------------------------
+ MOVIL
+--------------------------------*/
+
+@media(max-width:700px){
+
+.photo{
+    width:360px;
+}
+
+.texto-sobre{
+    top:35px;
+}
+
+.texto-sobre h1{
+    font-size:46px;
+}
+
+.texto-sobre h2{
+    font-size:18px;
+}
+
+.texto-sobre .anillos{
+    width:50px;
+    height:50px;
+}
+
+.sobre p{
+    font-size:18px;
+}
+
+.tarjeta{
+    padding:30px;
+}
+
+.tarjeta h2{
+    font-size:42px;
+}
+
+.tarjeta h3{
+    font-size:30px;
+}
+
+.tarjeta p{
+    font-size:21px;
+}
+
+.boton{
+    width:100%;
+}
+
+.hojas{
+    width:120px;
+}
+
+}

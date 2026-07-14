@@ -233,13 +233,13 @@ body{
 --------------------------------*/
 
 .final{
-    padding:80px 20px 120px;
+    padding:60px 20px 120px;
 }
 
 .final h2{
     font-family:'League Script', cursive;
     color:#6d8064;
-    font-size:48px;
+    font-size:40px;
     font-weight:350;
     display:flex;
     align-items:center;

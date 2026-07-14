@@ -239,7 +239,7 @@ body{
 .final h2{
     font-family:'League Script', cursive;
     color:#6d8064;
-    font-size:58px;
+    font-size:48px;
     font-weight:350;
     display:flex;
     align-items:center;
@@ -320,7 +320,7 @@ body{
 }
 
 .hojas{
-    width:120px;
+    width:220px;
 }
 
 }
